@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraComfort™ Ergonomic Office Chair - Exclusive PrimeDeals NG</title>
+    <style>
+        /* Configuration Variables */
+        :root {
+            --color-fuchsia: #d946ef;
+            --color-red: #dc2626;
+            --color-green: #10b981;
+            --color-yellow: #f59e0b;
+            --color-blue: #3b82f6;
+            --color-slate-900: #0f172a;
+            --color-slate-700: #475569;
+            --color-slate-600: #475569;
+            --color-slate-400: #94a3b8;
+            --color-slate-200: #e2e8f0;
+            --color-white: #ffffff;
+        }
+
+        /* Basic Styles */
+        body {
+            font-family: ui-sans-serif, system-ui, sans-serif;
+            margin: 0;
+            color: var(--color-slate-900);
+            background: linear-gradient(to bottom, var(--color-white), rgba(253, 242, 244, 0.3), var(--color-white));
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Utility Classes (Mimicking Tailwind) */
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .gap-4 { gap: 1rem; }
+        .gap-8 { gap: 2rem; }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        @media (min-width: 640px) { .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        /* Components */
+        .card {
+            border-radius: 1rem;
+            border: 1px solid var(--color-slate-200);
+            padding: 1.5rem;
+            background-color: var(--color-white);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .card-header {
+            padding-bottom: 1rem;
+            text-align: center;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        /* Buttons & Icons */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-primary { background-color: var(--color-red); color: var(--color-white); }
+        .btn-primary:hover { background-color: #b91c1c; }
+        .btn-lg { font-size: 1.125rem; padding: 1rem 2rem; border-radius: 1rem; }
+        .icon { display: inline-block; margin-right: 0.5rem; line-height: 1; }
+
+        /* Countdown & Banners */
+        header { position: sticky; top: 0; z-index: 10; background: rgba(255, 255, 255, 0.9); border-bottom: 1px solid rgba(226, 232, 240, 0.6); }
+        .countdown-banner { background-color: var(--color-red); color: var(--color-white); padding: 0.5rem 0; text-align: center; }
+        .countdown-time { background-color: rgba(0, 0, 0, 0.5); padding: 0.25rem 0.5rem; border-radius: 0.375rem; font-weight: 700; animation: pulse 1s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
+
+        /* Pricing */
+        .price-current { font-size: 2.25rem; font-weight: 800; color: var(--color-red); }
+        .price-compare { font-size: 1.25rem; text-decoration: line-through; color: var(--color-slate-400); }
+        .discount-badge { background-color: #fee2e2; color: #b91c1c; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; animation: pulse 1s infinite; }
+        .highlight { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.875rem; font-weight: 600; color: var(--color-slate-700); }
+        .check-icon { color: var(--color-green); font-size: 1.25rem; line-height: 1; }
+
+        /* Package Selector */
+        .package-option {
+            border: 2px solid var(--color-slate-200);
+            border-radius: 1rem;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .package-option.selected { border-color: var(--color-fuchsia); background-color: #fdf2f8; }
+        .best-seller-badge { position: absolute; top: -0.75rem; right: 0.5rem; background-color: var(--color-yellow); color: var(--color-slate-900); font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 9999px; }
+
+        /* Reviews */
+        .review-card { border: 2px solid #bbf7d0; background-color: #f0fff4; }
+        .stars-yellow { color: var(--color-yellow); }
+
+        /* Accordion (FAQ) */
+        .accordion-item { border-bottom: 1px solid var(--color-slate-200); }
+        .accordion-trigger {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem 0;
+            background: none;
+            border: none;
+            text-align: left;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .accordion-trigger:hover { color: var(--color-fuchsia); }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-item.open .accordion-icon {
+            transform: rotate(180deg);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+            padding: 0;
+        }
+        .accordion-item.open .accordion-content {
+            max-height: 200px; /* Adjust as needed */
+            padding-bottom: 1rem;
+        }
+
+        /* Form */
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.25rem; font-size: 0.875rem; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--color-slate-400);
+            border-radius: 0.5rem;
+            box-sizing: border-box;
+        }
+        .form-group textarea { resize: vertical; }
+
+    </style>
+</head>
+<body>
+
+    <div class="min-h-screen">
+        <header>
+            <div class="container flex items-center justify-between py-3">
+                <div class="flex items-center gap-2">
+                    <span class="icon" style="color: var(--color-fuchsia);">&#9733;</span>
+                    <div>
+                        <p class="font-bold">PrimeDeals NG</p>
+                        <p style="font-size: 0.75rem; color: var(--color-slate-700);">Premium Quality. Free Nationwide Delivery. Pay on Delivery.</p>
+                    </div>
+                </div>
+                <a href="#order" class="btn btn-primary" style="padding: 0.5rem 1rem; border-radius: 1rem;">
+                    <span class="icon">&#128722;</span> 🔥 CLAIM YOURS
+                </a>
+            </div>
+            <div class="countdown-banner">
+                <div class="container flex items-center justify-center gap-4">
+                    <span style="font-size: 0.875rem; font-weight: 700;">🚨 FINAL HOURS: Promo ends in:</span>
+                    <div id="countdown" class="flex gap-2" style="font-size: 0.875rem;">
+                        <span class="countdown-time" data-unit="d">0d</span>
+                        <span class="countdown-time" data-unit="h">0h</span>
+                        <span class="countdown-time" data-unit="m">0m</span>
+                        <span class="countdown-time" data-unit="s">0s</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div style="background: linear-gradient(to right, var(--color-yellow), #f97316); color: var(--color-slate-900); padding: 0.5rem 0; text-align: center;">
+            <div class="container flex items-center justify-center gap-8" style="font-size: 0.875rem; font-weight: 700; animation: pulse 1s infinite;">
+                <span>⚠️ ONLY 47 UNITS LEFT</span>
+                <span>🔥 200+ PEOPLE VIEWING</span>
+                <span>💰 PRICE DOUBLES TOMORROW</span>
+            </div>
+        </div>
+
+        <section class="container" style="padding: 3rem 1rem;">
+            <div class="grid lg\:grid-cols-2 gap-8">
+                <div class="order-2 lg:order-1">
+                    <div class="card" style="padding: 0;">
+                        <img src="https://via.placeholder.com/600x600?text=UltraComfort+Chair" alt="Product Image" style="width: 100%; height: auto; border-radius: 1rem;">
+                    </div>
+                    <div class="flex gap-2 mt-2">
+                        <img src="https://via.placeholder.com/100x100?text=View+1" style="width: 24%; border: 2px solid var(--color-fuchsia); border-radius: 0.5rem;">
+                        <img src="https://via.placeholder.com/100x100?text=View+2" style="width: 24%; border: 1px solid var(--color-slate-200); border-radius: 0.5rem;">
+                        <img src="https://via.placeholder.com/100x100?text=View+3" style="width: 24%; border: 1px solid var(--color-slate-200); border-radius: 0.5rem;">
+                        <img src="https://via.placeholder.com/100x100?text=View+4" style="width: 24%; border: 1px solid var(--color-slate-200); border-radius: 0.5rem;">
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <h1 style="font-size: 2rem; font-weight: 800; line-height: 1.2;">UltraComfort™ Ergonomic Office Chair</h1>
+                    <p style="margin-top: 0.5rem; color: var(--color-slate-700); font-weight: 600;">Transform Your Work Life Forever - End Back Pain, Boost Productivity, Work in Luxury</p>
+
+                    <div class="flex items-center gap-4 mt-4">
+                        <p class="price-current" id="hero-price">₦119,999</p>
+                        <p class="price-compare">₦179,999</p>
+                        <span class="discount-badge">-33% OFF 🔥</span>
+                    </div>
+
+                    <ul style="list-style: none; padding: 0; margin-top: 1.5rem;" class="grid gap-3">
+                        <li class="highlight"><span class="check-icon">&#10004;</span> <span>**Eliminates back pain** in 7 days or money back</span></li>
+                        <li class="highlight"><span class="check-icon">&#10004;</span> <span>Increases productivity by 40% (proven by users)</span></li>
+                        <li class="highlight"><span class="check-icon">&#10004;</span> <span>**Premium materials** worth ₦300,000+ for just ₦119,999</span></li>
+                        <li class="highlight"><span class="check-icon">&#10004;</span> <span>**1-year warranty** + lifetime customer support</span></li>
+                    </ul>
+                    
+                    <div class="card" style="margin-top: 1rem; border: 2px solid #bbf7d0; background-color: #f0fff4; text-align: center;">
+                        <div class="flex items-center justify-center gap-4" style="font-size: 0.875rem;">
+                            <span style="font-weight: 700;">&#128100; 50,000+ Happy Customers</span>
+                            <span style="font-weight: 700;">&#9733; 4.9/5 Rating</span>
+                            <span style="font-weight: 700;">&#127941; 98% Recommend</span>
+                        </div>
+                    </div>
+
+                    <a href="#order" class="btn btn-primary btn-lg w-full" style="margin-top: 2rem; animation: pulse 1s infinite;">
+                        <span class="icon">&#128722;</span> 🔥 CLAIM YOUR CHAIR NOW
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 1rem 0;">
+            <div class="card" style="border: 2px solid #bfdbfe; background-color: #f8fbff;">
+                <div class="card-header">
+                    <p class="card-title">🥊 UltraComfort™ vs The Competition</p>
+                    <p style="color: var(--color-slate-600); font-weight: 600;">See why smart Nigerians choose UltraComfort™</p>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--color-slate-200);">
+                                <th style="text-align: left; padding: 0.75rem 0; font-weight: 700;">Feature</th>
+                                <th style="text-align: center; padding: 0.75rem 0; font-weight: 700; color: var(--color-green);">UltraComfort™</th>
+                                <th style="text-align: center; padding: 0.75rem 0; font-weight: 700; color: var(--color-red);">Others</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td style="padding: 0.75rem 0; font-weight: 600; border-bottom: 1px solid var(--color-slate-100);">Price</td><td style="text-align: center; font-weight: 700; color: var(--color-green);">₦119,999</td><td style="text-align: center; font-weight: 700; color: var(--color-red);">₦300,000 - ₦800,000</td></tr>
+                            <tr><td style="padding: 0.75rem 0; font-weight: 600; border-bottom: 1px solid var(--color-slate-100);">Warranty</td><td style="text-align: center; font-weight: 700; color: var(--color-green);">1 Year Full</td><td style="text-align: center; font-weight: 700; color: var(--color-red);">3-6 Months Limited</td></tr>
+                            <tr><td style="padding: 0.75rem 0; font-weight: 600; border-bottom: 1px solid var(--color-slate-100);">Delivery</td><td style="text-align: center; font-weight: 700; color: var(--color-green);">FREE Nationwide</td><td style="text-align: center; font-weight: 700; color: var(--color-red);">₦15,000 - ₦50,000</td></tr>
+                            <tr><td style="padding: 0.75rem 0; font-weight: 600;">Support</td><td style="text-align: center; font-weight: 700; color: var(--color-green);">Lifetime Chat/Call</td><td style="text-align: center; font-weight: 700; color: var(--color-red);">Email Only</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 1rem;">
+            <div class="grid lg\:grid-cols-2 gap-8">
+                <div class="card" style="border: 2px solid #fecaca; background-color: #fef2f2;">
+                    <div class="card-header" style="text-align: left;"><p class="card-title" style="color: var(--color-red);"><span class="icon">&#9888;</span> URGENT: Read This Before Your Back Gets Worse</p></div>
+                    <p style="color: var(--color-slate-700); font-weight: 600; line-height: 1.6;">
+                        🚨 WARNING: Your current chair is DESTROYING your spine and costing you thousands in medical bills! The UltraComfort™ isn't just a chair - it's your personal health investment that pays for itself. While others suffer from chronic back pain, you'll experience the luxury of pain-free 12-hour work sessions. This isn't available in any Nigerian store - we're the EXCLUSIVE distributor. Once this batch sells out, the next shipment won't arrive for 6 months!
+                    </p>
+                </div>
+                <div class="card" style="border: 2px solid #bfdbfe; background-color: var(--color-white);">
+                    <div class="card-header" style="text-align: left;"><p class="card-title" style="color: var(--color-blue);"><span class="icon">&#9889;</span> Premium Specifications</p></div>
+                    <div class="grid gap-3">
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-slate-100);"><span style="font-weight: 700; color: var(--color-slate-600);">Seat Height</span><span style="font-weight: 600;">42-52cm adjustable (fits 95% of Nigerians)</span></div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-slate-100);"><span style="font-weight: 700; color: var(--color-slate-600);">Weight Capacity</span><span style="font-weight: 600;">150kg maximum (strongest in Nigeria)</span></div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-slate-100);"><span style="font-weight: 700; color: var(--color-slate-600);">Material</span><span style="font-weight: 600;">German breathable mesh + Japanese memory foam</span></div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--color-slate-100);"><span style="font-weight: 700; color: var(--color-slate-600);">Frame</span><span style="font-weight: 600;">Military-grade steel (lasts 15+ years)</span></div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0;"><span style="font-weight: 700; color: var(--color-slate-600);">Warranty</span><span style="font-weight: 600;">1-year comprehensive + lifetime support</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 0 1rem;">
+            <div class="card" style="background: linear-gradient(to bottom right, #f0fff4, #eff6ff); border: 2px solid #bbf7d0;">
+                <div style="text-align: center; padding: 1.5rem;">
+                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">🔥 Why Smart Nigerians Choose UltraComfort™ Over Expensive Alternatives</h2>
+                    <p style="color: var(--color-slate-700); font-weight: 600; line-height: 1.6;">
+                        While Herman Miller chairs cost ₦800,000+ and IKEA chairs break after 6 months, UltraComfort™ gives you PREMIUM quality at an unbeatable price. Used by 50,000+ professionals across Lagos, Abuja, and Port Harcourt. CEOs, doctors, engineers, and remote workers all agree: this chair transformed their work life. Don't let back pain steal another productive day from you!
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container" style="padding: 3rem 1rem;">
+            <h2 style="font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 1.5rem;">💬 What Our 50,000+ Customers Say</h2>
+            <div class="grid sm\:grid-cols-3 gap-4">
+                <div class="card review-card">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="stars-yellow">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span style="font-size: 0.75rem; background-color: #d1fae5; color: #065f46; padding: 0.25rem 0.5rem; border-radius: 9999px; font-weight: 600;">✓ Verified</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--color-slate-700); font-weight: 600;">"After 12-hour surgeries, I had chronic back pain. This chair ELIMINATED it completely. Worth every naira!"</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.75rem; font-weight: 700; color: var(--color-slate-600);">— Dr. Chinedu O. (Surgeon)</p>
+                </div>
+                <div class="card review-card">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="stars-yellow">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span style="font-size: 0.75rem; background-color: #d1fae5; color: #065f46; padding: 0.25rem 0.5rem; border-radius: 9999px; font-weight: 600;">✓ Verified</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--color-slate-700); font-weight: 600;">"My productivity increased 40% since getting this chair. No more hourly breaks for back pain. GAME CHANGER!"</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.75rem; font-weight: 700; color: var(--color-slate-600);">— Mary A. (Remote Developer)</p>
+                </div>
+                <div class="card review-card">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="stars-yellow">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span style="font-size: 0.75rem; background-color: #d1fae5; color: #065f46; padding: 0.25rem 0.5rem; border-radius: 9999px; font-weight: 600;">✓ Verified</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--color-slate-700); font-weight: 600;">"Bought 20 for my office. Staff productivity up, sick days down. Best business investment ever!"</p>
+                    <p style="margin-top: 0.75rem; font-size: 0.75rem; font-weight: 700; color: var(--color-slate-600);">— Fatima K. (CEO)</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="container" style="padding: 3rem 1rem; background-color: #fef2f2; border-radius: 1rem; margin-top: 2rem;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2 style="font-size: 1.875rem; font-weight: 700; color: #b91c1c;">🔥 FINAL CALL: Secure Your Chair NOW</h2>
+                <p style="color: var(--color-slate-700); font-weight: 600;">Only 47 units left at this price. Next batch arrives March 2025 at ₦179,999</p>
+            </div>
+
+            <div class="grid lg\:grid-cols-2 gap-8">
+                <div>
+                    <div class="card" style="border: 2px solid #fecaca; background-color: var(--color-white);">
+                        <div class="card-header"><p class="card-title">Choose Your Life-Changing Package</p></div>
+                        <div id="package-selector">
+                            <label class="package-option" data-pkg-id="basic" data-price="119999">
+                                <input type="radio" name="package" value="basic" style="margin-right: 0.75rem;">
+                                <div><p style="font-weight: 700;">Basic - ₦119,999</p><p style="font-size: 0.875rem; color: var(--color-slate-700);">Chair only - Perfect starter</p></div>
+                            </label>
+                            <label class="package-option selected" data-pkg-id="pro" data-price="139999">
+                                <span class="best-seller-badge">MOST POPULAR</span>
+                                <input type="radio" name="package" value="pro" checked style="margin-right: 0.75rem;">
+                                <div><p style="font-weight: 700;">Pro - ₦139,999</p><p style="font-size: 0.875rem; color: var(--color-slate-700);">Chair + Headrest + Premium Wheels</p></div>
+                            </label>
+                            <label class="package-option" data-pkg-id="bundle" data-price="229999">
+                                <input type="radio" name="package" value="bundle" style="margin-right: 0.75rem;">
+                                <div><p style="font-weight: 700;">Bundle - ₦229,999</p><p style="font-size: 0.875rem; color: var(--color-slate-700);">2x Chairs - Perfect for couples/offices</p></div>
+                            </label>
+                        </div>
+
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-slate-200);">
+                            <div class="flex justify-between items-center mb-4">
+                                <label for="qty" style="font-weight: 700;">Quantity:</label>
+                                <input type="number" id="qty" value="1" min="1" max="10" style="width: 4rem; text-align: center; padding: 0.5rem; border: 1px solid var(--color-slate-400); border-radius: 0.5rem;">
+                            </div>
+                            <div class="flex justify-between items-center" style="font-size: 1.25rem; font-weight: 700;">
+                                <span>Total Price:</span>
+                                <span id="total-price" style="color: var(--color-red);">₦139,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <form id="order-form" class="card" style="border: 2px solid #bbf7d0; background-color: var(--color-white); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
+                        <div class="card-header"><p class="card-title" style="font-size: 1.5rem;">Enter Delivery Information</p></div>
+                        <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" required></div>
+                        <div class="form-group"><label for="phone">Phone Number (WhatsApp)</label><input type="tel" id="phone" name="phone" required></div>
+                        <div class="form-group">
+                            <label for="state">State/Region</label>
+                            <select id="state" name="state" required>
+                                <option value="">Select State</option>
+                                <option>Lagos</option><option>Abuja (FCT)</option><option>Rivers</option><option>Kano</option><option>Ogun</option><option>Imo</option><option>Delta</option><option>Edo</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><label for="address">Street Address (Where to Deliver)</label><textarea id="address" name="address" required></textarea></div>
+
+                        <button type="submit" class="btn btn-lg w-full" style="background-color: var(--color-green); color: var(--color-white); margin-top: 1.5rem; animation: pulse 1s infinite;">
+                            <span class="icon">&#128722;</span> **CONFIRM ORDER & PAY ON DELIVERY**
+                        </button>
+                        <p id="final-pay-text" style="text-align: center; font-size: 0.875rem; color: #047857; font-weight: 600; margin-top: 0.5rem;">
+                            You Pay ₦139,999 Only When You Receive the Chair!
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 3rem 1rem 0;">
+            <h2 style="font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 1.5rem;">🤔 Questions? We Answered Them All</h2>
+            <div id="faq-accordion" style="max-width: 800px; margin: 0 auto;">
+                <div class="accordion-item">
+                    <button class="accordion-trigger">
+                        Is this really better than Herman Miller chairs costing ₦800,000?
+                        <span class="accordion-icon">&#9660;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p style="color: var(--color-slate-700); font-weight: 600;">YES! We use the same German mesh technology and Japanese memory foam, but manufacture efficiently to offer 90% of the quality at 15% of the price. Our customers who've used both prefer UltraComfort™!</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger">
+                        What if I'm not satisfied?
+                        <span class="accordion-icon">&#9660;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p style="color: var(--color-slate-700); font-weight: 600;">IMPOSSIBLE! But if somehow you're not 100% satisfied, we offer 7-day money-back guarantee. In 3 years, only 0.2% of customers returned their chairs.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger">
+                        How long will this promo price last?
+                        <span class="accordion-icon">&#9660;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p style="color: var(--color-slate-700); font-weight: 600;">This is our FINAL clearance sale before prices return to ₦179,999. Once these 47 units are gone, the next batch won't arrive until March 2025 at full price.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-trigger">
+                        Can I trust Pay on Delivery?
+                        <span class="accordion-icon">&#9660;</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p style="color: var(--color-slate-700); font-weight: 600;">Inspect the chair completely before paying. If it's not exactly as described, don't pay a kobo. We've delivered 50,000+ chairs this way with 99.8% satisfaction rate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer style="margin-top: 3rem; border-top: 1px solid var(--color-slate-200); background-color: #f8fafc;">
+            <div class="container py-6" style="text-align: center; font-size: 0.75rem; color: var(--color-slate-400);">
+                <p>&copy; 2024 PrimeDeals NG. All rights reserved. Prices are subject to change after the promo ends.</p>
+                <div class="mt-2 flex items-center justify-center gap-4" style="margin-top: 0.5rem;">
+                    <a href="#" style="color: var(--color-slate-600);">Privacy Policy</a> |
+                    <a href="#" style="color: var(--color-slate-600);">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <button style="position: fixed; bottom: 20px; right: 20px; z-index: 50; width: 60px; height: 60px; border-radius: 50%; border: none; background: linear-gradient(to bottom right, #d946ef, #ec4899); color: white; font-size: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);">
+        &#128172;
+    </button>
+
+<script>
+    // Configuration Data
+    const PRODUCT_PACKAGES = [
+        { id: "basic", name: "Basic", price: 119999, best: false },
+        { id: "pro", name: "Pro", price: 139999, best: true },
+        { id: "bundle", name: "Bundle", price: 229999, best: false },
+    ];
+    const PROMO_ENDS_AT = (() => {
+        const d = new Date();
+        d.setDate(d.getDate() + 3); // Set promo to end in 3 days from now
+        d.setHours(23, 59, 59, 0);
+        return d;
+    })();
+
+    // Utility: format NGN
+    const formatNGN = (n) =>
+        new Intl.NumberFormat("en-NG", { style: "currency", currency: "NGN", maximumFractionDigits: 0 }).format(n);
+
+    // --- Countdown Logic ---
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = PROMO_ENDS_AT.getTime() - now;
+        const countdownEl = document.getElementById('countdown');
+
+        if (distance < 0) {
+            countdownEl.innerHTML = '<span style="color:white; font-size: 0.875rem;">PROMO ENDED!</span>';
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownEl.querySelector('[data-unit="d"]').textContent = `${days}d`;
+        countdownEl.querySelector('[data-unit="h"]').textContent = `${hours}h`;
+        countdownEl.querySelector('[data-unit="m"]').textContent = `${minutes}m`;
+        countdownEl.querySelector('[data-unit="s"]').textContent = `${seconds}s`;
+    }
+
+    // --- Price Update Logic ---
+    function updatePrice() {
+        const selectedPackageEl = document.querySelector('input[name="package"]:checked');
+        const selectedId = selectedPackageEl ? selectedPackageEl.value : 'pro';
+        const selectedPackage = PRODUCT_PACKAGES.find(p => p.id === selectedId);
+        const qty = parseInt(document.getElementById('qty').value) || 1;
+        const total = selectedPackage.price * qty;
+
+        const formattedTotal = formatNGN(total);
+
+        // Update total price display
+        document.getElementById('total-price').textContent = formattedTotal;
+        document.getElementById('final-pay-text').innerHTML = `You Pay **${formattedTotal}** Only When You Receive the Chair!`;
+        document.getElementById('hero-price').textContent = formatNGN(selectedPackage.price);
+
+        // Update package selection styles
+        document.querySelectorAll('.package-option').forEach(el => {
+            el.classList.remove('selected');
+        });
+        document.querySelector(`.package-option[data-pkg-id="${selectedId}"]`).classList.add('selected');
+    }
+
+    // --- Form Submission Logic ---
+    function handleOrderSubmit(e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const name = form.name.value;
+        const phone = form.phone.value;
+        const state = form.state.value;
+        const address = form.address.value;
+
+        const selectedPackageEl = document.querySelector('input[name="package"]:checked');
+        const selectedId = selectedPackageEl ? selectedPackageEl.value : 'pro';
+        const selectedPackage = PRODUCT_PACKAGES.find(p => p.id === selectedId);
+        const qty = parseInt(document.getElementById('qty').value) || 1;
+        const total = selectedPackage.price * qty;
+
+        const message = `
+🎉 ORDER CONFIRMED!
+
+Package: ${selectedPackage.name}
+Qty: ${qty}
+Total: ${formatNGN(total)}
+
+Name: ${name}
+Phone: ${phone}
+State: ${state}
+Address: ${address}
+
+✅ You'll receive WhatsApp confirmation within 5 minutes!
+✅ Delivery in 1-3 days
+✅ Pay only when you receive and inspect your chair
+        `;
+
+        alert(message);
+        // In a real application, replace alert with server submission and redirection.
+        // form.reset(); 
+    }
+
+    // --- FAQ Accordion Logic ---
+    function setupAccordion() {
+        document.querySelectorAll('.accordion-item').forEach(item => {
+            const trigger = item.querySelector('.accordion-trigger');
+            trigger.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+
+                // Close all other open items
+                document.querySelectorAll('.accordion-item.open').forEach(openItem => {
+                    if (openItem !== item) {
+                        openItem.classList.remove('open');
+                        openItem.querySelector('.accordion-content').style.maxHeight = 0;
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('open');
+                const content = item.querySelector('.accordion-content');
+                if (isOpen) {
+                    content.style.maxHeight = 0;
+                } else {
+                    // Set height to scrollHeight to enable transition effect
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        });
+    }
+
+    // --- Initialization ---
+    document.addEventListener('DOMContentLoaded', () => {
+        // Init: Set default package and listen for changes
+        document.getElementById('package-selector').addEventListener('change', updatePrice);
+        document.getElementById('qty').addEventListener('input', updatePrice);
+        document.getElementById('order-form').addEventListener('submit', handleOrderSubmit);
+        
+        // Init: Features
+        setupAccordion();
+        updateCountdown();
+        updatePrice();
+    
+        // Start interval
+        setInterval(updateCountdown, 1000);
+    });
+</script>
+
+</body>
+</html>
