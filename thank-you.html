@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Order! | PrimeDeals NG</title>
+    <style>
+        :root {
+            --color-red: #dc2626;
+            --color-green: #10b981;
+            --color-slate-900: #0f172a;
+            --color-slate-700: #475569;
+            --color-white: #ffffff;
+            --color-yellow: #f59e0b;
+        }
+
+        body {
+            font-family: ui-sans-serif, system-ui, sans-serif;
+            margin: 0;
+            background-color: #f8fafc;
+            color: var(--color-slate-900);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .thank-you-card {
+            max-width: 600px;
+            width: 100%;
+            background-color: var(--color-white);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 3px solid var(--color-green);
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: var(--color-green);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .main-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--color-slate-900);
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--color-slate-700);
+            margin-bottom: 2rem;
+        }
+
+        .next-steps {
+            background-color: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .next-steps h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-green);
+            margin-top: 0;
+        }
+
+        .next-steps ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 1.8;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            background-color: #25d366; /* WhatsApp Green */
+            color: var(--color-white);
+            font-size: 1.25rem;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            margin-top: 1.5rem;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128c7e;
+        }
+
+        .small-print {
+            font-size: 0.875rem;
+            color: var(--color-slate-700);
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-card">
+        <div class="success-icon">&#10003;</div> <!-- Checkmark icon -->
+        
+        <h1 class="main-title">Order Confirmed! 🎉</h1>
+        
+        <p class="subtitle">
+            Your UltraComfort™ Chair is being processed. **You chose Pay on Delivery.** Please check your phone for an immediate confirmation SMS.
+        </p>
+
+        <div class="next-steps">
+            <h3>Next Steps (Read Carefully!)</h3>
+            <ul>
+                <li>1. 📞 **Confirmation Call:** A PrimeDeals agent will call your provided number within 2 hours to confirm your address and preferred delivery time.</li>
+                <li>2. 🚚 **Delivery:** Lagos/Abuja delivery takes 2-4 business days. Other states take 3-6 business days.</li>
+                <li>3. 💵 **Payment:** Have your **₦139,999** (or total bundle price) ready for the delivery agent.</li>
+            </ul>
+        </div>
+        
+        <a href="tel:+2348012345678" class="whatsapp-btn">
+             <span style="font-size: 1.5rem; margin-right: 0.5rem;">&#9990;</span> Call Us Now if you have questions
+        </a>
+        
+        <p class="small-print">
+            If you need to change your order details (address or package), please call our support line immediately.
+        </p>
+
+        <p style="margin-top: 2rem;">
+            <a href="index.html" style="color: var(--color-slate-700); font-weight: 600; text-decoration: none;">← Return to Homepage</a>
+        </p>
+    </div>
+</body>
+</html>
